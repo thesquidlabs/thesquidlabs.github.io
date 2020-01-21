@@ -1,0 +1,47 @@
+<html> 
+<head>
+<style> 
+.center {
+	margin: auto;
+	width: 50%;
+	padding: 5rem;
+	text-align: center;
+	font-family: Helvetica;
+	font-size: 3rem;
+}
+.btn{
+	padding: 1rem;
+	font-size: 3rem;
+	margin: 2rem;
+	border-width: 0;
+  	outline: none;
+  	border-radius: 2px;
+  	box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+	font-family: Helvetica;
+	background-color: #42a5f5;
+	color: white;
+	transition: background-color .3s;
+}
+
+.btn:hover, .btn:focus {
+	background-color: #0077c2;
+}
+</style>	
+</head> 
+<body> 
+<h1> 
+	<div class="center">
+		Random prntscr site generator
+		<button class ="btn" onclick="urlGen()">Go to a random screenshot</button> 
+	</div> 
+</h1>
+<script>
+function urlGen(){
+	front = "https://prnt.sc/"
+	letters = Math.random().toString(36).substr(2, 2);
+	num = Math.floor(1000 + Math.random() * 9000);
+	window.location.href = front + letters + num;
+}
+</script>
+</body>
+</html>
